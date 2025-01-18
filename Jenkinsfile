@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'linuxserver/ffmpeg:latest'
-            args '-v /jenkins-workflows:/root/jenkins-workflows'
+            args '-v /jenkins-workflows:/root/jenkins-workflows --entrypoint /bin/bash'
         }
     }
     
